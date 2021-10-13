@@ -1,0 +1,35 @@
+.not-found-container {
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.not-found-img-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: #ffffff;
+}
+
+.not-found-img-text h1 {
+  margin-bottom: 20px;
+}
+
+.not-found-img {
+  width: 35%;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .not-found-img {
+    width: 90%;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+  .not-found-img-text p {
+    text-align: center;
+    line-height: 1.5;
+  }
+}
