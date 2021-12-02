@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 import './index.css'
 
 class Login extends Component {
-  state = {username: '', password: '', showError: false, errorMsg: ''}
+  state = {username: 'rahul', password: 'rahul@2021', showError: false, errorMsg: ''}
 
   processLoginFetch = async () => {
     const {username, password} = this.state
@@ -40,7 +40,7 @@ class Login extends Component {
   }
 
   render() {
-    const {showError, errorMsg} = this.state
+    const {showError, errorMsg, username, password} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
@@ -61,7 +61,7 @@ class Login extends Component {
             onChange={this.onUsernameChange}
             id="userName"
             placeholder="Username"
-            value="rahul"
+            value={username}
           />
 
           <label className="login-input-label" htmlFor="passWord">
@@ -72,7 +72,7 @@ class Login extends Component {
             id="passWord"
             type="password"
             placeholder="Password"
-            value="rahul@2021"
+            value={password}
           />
 
           <button className="login-form-btn" type="submit">
